@@ -46,6 +46,10 @@ export default function Home() {
 
           {!phone && (
             <Link className="home__cta" to="/contact">
+              <svg className="home__cta-nerve" viewBox="0 0 300 90" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+                <rect className="home__cta-nerve-trail" x="2" y="2" width="296" height="86" rx="43" pathLength="100" />
+                <rect className="home__cta-nerve-head" x="2" y="2" width="296" height="86" rx="43" pathLength="100" />
+              </svg>
               Get in touch
               <ArrowUpRight size={16} weight="bold" aria-hidden="true" />
             </Link>

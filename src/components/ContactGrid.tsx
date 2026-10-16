@@ -60,10 +60,10 @@ export default function ContactGrid() {
       <header className="pgrid__head">
         <span className="pgrid__eyebrow">FAQs / Contact</span>
         <h1 className="pgrid__title" id="contact-title">
-          Your contact headline goes here.
+          Let’s connect your systems.
         </h1>
         <p className="pgrid__lede">
-          PLACEHOLDER - tell me what to put here: one or two lines inviting people to write and saying what they get back.
+          Tell me about your CRM, your tools and the work you want to simplify.
         </p>
       </header>
 
@@ -128,12 +128,12 @@ export default function ContactGrid() {
                 <CheckCircle size={30} weight="fill" />
               </span>
               <h2 className="cgrid__done-title">
-                {status.via === 'webhook' ? 'Got it.' : 'Your mail app has it.'}
+                {status.via === 'webhook' ? 'Got it.' : 'Finish in your email app.'}
               </h2>
               <p className="cgrid__done-body">
                 {status.via === 'webhook'
-                  ? 'It is in my inbox and on my phone. You will hear back within one business day.'
-                  : 'The message is laid out and addressed. Press send there and you will hear back within one business day.'}
+                  ? 'Your inquiry has been submitted.'
+                  : 'If your email app opened, your draft is addressed to me. Review it and press send there, or email me directly.'}
               </p>
               <button type="button" className="cgrid__again" onClick={() => setStatus({ kind: 'idle' })}>
                 Write another
@@ -188,7 +188,7 @@ export default function ContactGrid() {
                   <span className="cgrid__submit-plane" aria-hidden="true">
                     <PaperPlaneTilt size={17} weight="fill" />
                   </span>
-                  <span className="cgrid__submit-label">{busy ? 'Sending' : 'Send message'}</span>
+                  <span className="cgrid__submit-label">{busy ? 'Preparing' : 'Prepare email'}</span>
                   <ArrowUpRight className="cgrid__submit-arrow" size={15} weight="bold" aria-hidden="true" />
                 </button>
                 {status.kind === 'error' ? (
@@ -197,7 +197,7 @@ export default function ContactGrid() {
                     {status.note}
                   </span>
                 ) : (
-                  <span className="cgrid__hint">Short reassurance line, e.g. your reply time.</span>
+                  <span className="cgrid__hint">Opens your email app. You review and send.</span>
                 )}
               </div>
             </form>

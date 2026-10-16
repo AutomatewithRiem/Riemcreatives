@@ -1,49 +1,8 @@
-import { ArrowLeft } from '@/components/slab'
-import { useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { profile } from '@/data/profile'
-
-/**
- * Privacy Policy - PLACEHOLDER. Legal text has to describe YOUR site and what
- * it collects, so none is supplied. Write it (or have a lawyer or a policy
- * generator write it) and paste it into the sections below.
- */
-export default function Privacy() {
-  const navigate = useNavigate()
-
-  return (
-    <main className="legal-page" aria-label="Privacy Policy">
-      <div className="legal-page__card">
-        <button
-          className="legal-page__back"
-          onClick={() => navigate('/')}
-          aria-label="Back to home"
-        >
-          <ArrowLeft weight="bold" size={15} aria-hidden="true" />
-          Back to home
-        </button>
-
-        <h1 className="legal-page__title">Privacy Policy</h1>
-        <p className="legal-page__updated">Last updated: PLACEHOLDER date</p>
-
-        <div className="legal-page__body">
-          <h2>Who this covers</h2>
-          <p>PLACEHOLDER - tell me what to put here: who runs this site and which sites this policy applies to.</p>
-
-          <h2>What is collected</h2>
-          <p>PLACEHOLDER - tell me what to put here: what the contact form and any analytics collect.</p>
-
-          <h2>How it is used</h2>
-          <p>PLACEHOLDER - tell me what to put here: what you do with that data and who else sees it.</p>
-
-          <h2>How long it is kept</h2>
-          <p>PLACEHOLDER - tell me what to put here: retention periods and how to ask for deletion.</p>
-
-          <h2>Contact</h2>
-          <p>
-            Questions about this policy: <a href={`mailto:${profile.email}`}>{profile.email}</a>
-          </p>
-        </div>
-      </div>
-    </main>
-  )
+export default function LegalPage() {
+ return <main className="legal-page"><div className="legal-page__card"><Link className="legal-page__back" to="/">← Back to home</Link><h1 className="legal-page__title">Privacy notice</h1><p className="legal-page__updated">Updated October 16, 2026</p><div className="legal-page__body"><h2>About this portfolio</h2><p>This site presents the work and experience of Riemeiereyoung V. Lumapay.</p>
+<h2>Contacting me</h2><p>The contact form prepares a draft in your own email app. It does not automatically send a message or store your form submission on a site server. If you choose to send the draft, your email provider handles delivery.</p>
+<h2>Browser preferences</h2><p>This site stores theme, accessibility and performance preferences in your browser. You can remove these through your browser settings.</p>
+<h2>External links</h2><p>Project files open on Google Drive. External services have their own privacy practices. Email me with questions about information you send directly.</p><h2>Contact</h2><p><a href={`mailto:${profile.email}`}>{profile.email}</a></p></div></div></main>
 }

@@ -38,17 +38,14 @@ type Tool = {
 }
 
 export const tools: Tool[] = [
-  { name: 'Claude Code',          iconPath: '/icons/claude-code-logo.png' },
-  { name: 'Codex',                iconPath: '/icons/codex.svg',           color: '#000000' },
-  { name: 'Cursor',               iconPath: '/icons/cursor.svg',          color: '#0F172A' },
-  { name: 'Hermes AI',            iconPath: '/icons/nousresearch.svg',    color: '#18181B' },
-  { name: 'VS Code',              iconPath: '/icons/vscode.svg' },
-  { name: 'GoHighLevel',          iconPath: '/icons/gohighlevel.png' },
-  { name: 'Lightspeed X-Series',  iconPath: '/icons/lightspeed.png' },
-  { name: 'Google Workspace',     iconPath: '/icons/googleworkspace.svg' },
-  { name: 'Zendesk',              iconPath: '/icons/zendesk.svg',         color: '#03363D' },
-  { name: 'Intercom',             iconPath: '/icons/intercom.svg',        color: '#1F8DED' },
-  { name: 'Slack',                iconPath: '/icons/slack.svg',           color: '#611F69' },
+ { name: 'HighLevel', iconPath: '/icons/gohighlevel.png' },
+ { name: 'Zapier', iconPath: '/icons/ai/zapier.svg' },
+ { name: 'n8n', iconPath: '/icons/ai/n8n.svg' },
+ { name: 'Claude Code', iconPath: '/icons/claude-code-logo.png' },
+ { name: 'Codex', iconPath: '/icons/codex.svg', color: '#000000' },
+ { name: 'VS Code', iconPath: '/icons/vscode.svg' },
+ { name: 'Google Workspace', iconPath: '/icons/googleworkspace.svg' },
+ { name: 'Slack', iconPath: '/icons/slack.svg', color: '#611F69' },
 ]
 
 export default function ToolsMarquee() {

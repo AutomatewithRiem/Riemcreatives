@@ -13,11 +13,11 @@ import {
   AddressBook,
   Globe,
   AppWindow,
-  SealCheck,
 } from '@/components/slab'
-import { gymFunnel, bookingFunnel, websiteFunnel, type Funnel } from '@/data/funnels'
+
 import { aiStack, type StackNode } from '@/data/ai-stack'
-import { profile } from '@/data/profile'
+import ProjectPageStack from './ProjectPageStack'
+import { openProjectGallery } from './ProjectGallery'
 
 /**
  * Home's showcase: one card per rail view, each an index of what that view
@@ -29,27 +29,25 @@ import { profile } from '@/data/profile'
  * height and Home stays a single viewport.
  */
 
-const thumbSrc = (f: Funnel) =>
-  `/home/${f.dir ?? 'funnels'}-${f.file.replace('.html', '.jpeg')}`
-
-const PROJECT_SHOTS = [gymFunnel[0], bookingFunnel[0], websiteFunnel[0], gymFunnel[1]].filter(Boolean)
 
 const OFFERS = [
-  { Icon: FunnelSimple, title: 'Service One', note: 'PLACEHOLDER one-liner' },
-  { Icon: Gear, title: 'Service Two', note: 'PLACEHOLDER one-liner' },
-  { Icon: AddressBook, title: 'Service Three', note: 'PLACEHOLDER one-liner' },
-  { Icon: Globe, title: 'Service Four', note: 'PLACEHOLDER one-liner' },
-  { Icon: AppWindow, title: 'Service Five', note: 'PLACEHOLDER one-liner' },
+  { Icon: FunnelSimple, title: 'HighLevel CRM', note: 'Pipelines & lead management' },
+  { Icon: Gear, title: 'Workflow automation', note: 'Follow-up & booking journeys' },
+  { Icon: AddressBook, title: 'App integrations', note: 'Zapier · Make · n8n' },
+  { Icon: Globe, title: 'Funnels & websites', note: 'Lead capture & calendars' },
+  { Icon: AppWindow, title: 'A2P assistance', note: 'HighLevel setup support' },
 ] as const
 
 const CLIENTS = [
-  { name: 'Client Name 1', role: 'PLACEHOLDER - your role for them', work: 'Tag · Tag · Tag', logo: '/placeholders/logo.svg' },
-  { name: 'Client Name 2', role: 'PLACEHOLDER - your role for them', work: 'Tag · Tag · Tag', logo: '/placeholders/logo.svg' },
-  { name: 'Client Name 3', role: 'PLACEHOLDER - your role for them', work: 'Tag · Tag · Tag' },
+  { name: 'Funnel Design', role: '1 year of experience', work: 'Funnels · Landing pages · Lead capture' },
+  { name: 'HighLevel CRM & Automation', role: '6 months of experience', work: 'CRM systems · Workflows · AI automation' },
+  { name: 'Amazon product research', role: 'Private client work', work: 'Research · Ecommerce · Operations' },
+  { name: 'Virtual assistance', role: 'Three years of experience', work: 'Remote support · Business processes' },
+  { name: 'Ryan Otwell', role: 'Professional reference', work: 'First Amazon / VA role · One year' },
+  { name: 'Sigal Lechno', role: 'Professional reference', work: 'slechno21@gmail.com' },
+  { name: 'Roger', role: 'Professional reference', work: 'rmuscarello@marketfinds365.com' },
 ]
 
-// Three photos of you, fanned. Small copies are fine - the fan shows them under 100px.
-const PHOTOS = [profile.avatarSrc, '/avatar.svg?2', '/avatar.svg?3']
 
 /** The AI systems as a flat list: every leaf of the Projects tree, in order. */
 const leaves = (n: StackNode): StackNode[] =>
@@ -85,36 +83,24 @@ export default function HomeBento() {
 
   return (
     <nav className="bento" aria-label="Explore the portfolio">
-      {/* Projects: the funnel thumbnails drift upward on a looped track. */}
-      <Link to="/projects" className="bento__card bento__card--projects">
-        <CardHead Icon={FolderOpen} title="Projects" desc="PLACEHOLDER - one line on what your projects are." />
-        <div className="bento__media bento__reel" aria-hidden="true">
-          <div className="bento__reel-track">
-            {[...PROJECT_SHOTS, ...PROJECT_SHOTS].map((f, i) => (
-              <span key={i} className="bento__shot">
-                <img src={thumbSrc(f)} alt="" loading="lazy" decoding="async" />
-              </span>
-            ))}
-          </div>
-        </div>
-      </Link>
+      {/* Projects: real pages unfold through a three-dimensional stack. */}
+      <button type="button" onClick={event => openProjectGallery(event.currentTarget)} aria-haspopup="dialog" className="bento__card bento__card--projects">
+        <CardHead Icon={FolderOpen} title="Projects" desc="CRM journeys & funnels, brought together." />
+        <div className="bento__media"><ProjectPageStack /></div>
+      </button>
 
-      {/* About: a fanned stack of photos. */}
+      {/* About: one human-and-technology portrait. */}
       <Link to="/about" className="bento__card bento__card--about">
-        <CardHead Icon={User} title="About" desc="PLACEHOLDER - one line about you." />
-        <div className="bento__media bento__fan" aria-hidden="true">
-          {PHOTOS.map((src, i) => (
-            <span key={src} className="bento__photo" style={{ ['--i' as string]: i }}>
-              <img src={src} alt="" loading="lazy" decoding="async" />
-            </span>
-          ))}
+        <CardHead Icon={User} title="About" desc="I turn everyday tasks into connected workflows." />
+        <div className="bento__media bento__portrait" aria-hidden="true">
+          <img src="/riem-portrait-tech.png" alt="" loading="lazy" decoding="async" />
         </div>
       </Link>
 
       {/* AI builds: the systems from the Projects tree, two chip rows
           scrolling against each other. */}
       <Link to="/projects" className="bento__card bento__card--ai">
-        <CardHead Icon={Robot} title="AI Builds" desc="PLACEHOLDER - one line on your AI or side builds." />
+        <CardHead Icon={Robot} title="Connected Systems" desc="Workflows, integrations and AI tools." />
         <div className="bento__media bento__chips" aria-hidden="true">
           {toolRows.map((row, r) => (
             <div key={r} className="bento__chip-row" data-dir={r ? 'right' : 'left'}>
@@ -133,21 +119,21 @@ export default function HomeBento() {
 
       {/* Credentials: the badge that matters, on its plate. */}
       <Link to="/about" className="bento__card bento__card--creds">
-        <CardHead Icon={Medal} title="Credentials" desc="PLACEHOLDER - your main certification." />
+        <CardHead Icon={Medal} title="Experience" desc="Funnel design, HighLevel CRM & AI automation." />
         <div className="bento__media bento__badge" aria-hidden="true">
           <span className="bento__badge-ring">
-            <img src="/placeholders/badge.svg" alt="" width={72} height={72} />
+            <img src="/experience-mark.svg" alt="" width={72} height={72} />
           </span>
           <span className="bento__badge-tag">
-            <SealCheck size={14} weight="fill" />
-            Your Credential
+            <Medal size={14} weight="fill" />
+            1 year in funnel design
           </span>
         </div>
       </Link>
 
       {/* Services: the five offers as a compact index. */}
       <Link to="/services" className="bento__card bento__card--services">
-        <CardHead Icon={Stack} title="Services" desc="PLACEHOLDER - what you offer, and to whom." />
+        <CardHead Icon={Stack} title="Services" desc="Practical systems for your business." />
         <ul className="bento__media bento__offers" role="list">
           {OFFERS.map(({ Icon, title, note }, i) => (
             <li key={title} className="bento__offer" style={{ '--i': i } as React.CSSProperties}>
@@ -168,17 +154,13 @@ export default function HomeBento() {
 
       {/* Testimonials: client cards drifting up a clipped column. */}
       <Link to="/testimonials" className="bento__card bento__card--quotes">
-        <CardHead Icon={Quotes} title="Testimonials" desc="PLACEHOLDER - one line on your clients." />
+        <CardHead Icon={Quotes} title="Background" desc="My approach to HighLevel CRM & automation." />
         <div className="bento__media bento__reviews" aria-hidden="true">
           <div className="bento__reviews-track">
             {[...CLIENTS, ...CLIENTS].map((c, i) => (
               <span key={i} className="bento__review">
                 <span className="bento__review-top">
-                  {c.logo ? (
-                    <img src={c.logo} alt="" width={18} height={18} />
-                  ) : (
-                    <Quotes size={14} weight="fill" />
-                  )}
+                  <Quotes size={14} weight="fill" />
                   <b>{c.name}</b>
                 </span>
                 <span className="bento__review-role">{c.role}</span>

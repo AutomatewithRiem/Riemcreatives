@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import { NavLink } from 'react-router-dom'
-import { SealCheck } from '@/components/slab'
 import ThemeGlyph from './ThemeGlyph'
 import {
   HomeIcon,
@@ -30,7 +29,7 @@ export const RAIL_LINKS = [
   { label: 'Projects', to: '/projects', Icon: FolderIcon },
   { label: 'Services', to: '/services', Icon: StackIcon },
   { label: 'Showcase', to: '/showcase', Icon: CupIcon },
-  { label: 'Testimonials', to: '/testimonials', Icon: StarIcon },
+  { label: 'Background', to: '/testimonials', Icon: StarIcon },
   { label: 'About', to: '/about', Icon: UserIcon },
   { label: 'FAQs / Contact', to: '/contact', Icon: MessageIcon },
 ] as const
@@ -56,7 +55,6 @@ export default function Rail() {
 
         <h2 className="rail__name">
           {profile.name}
-          <SealCheck size={19} weight="fill" aria-label={profile.verifiedLabel} />
         </h2>
         <p className="rail__handle">
           {profile.handle}

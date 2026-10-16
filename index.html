@@ -7,14 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 
     <!-- PLACEHOLDER - SEO. Replace the title, description, URLs and share image. -->
-    <title>Your Name - Your Title</title>
-    <meta name="description" content="PLACEHOLDER - one sentence on what you do and who you do it for." />
-    <meta name="author" content="Your Name" />
+    <title>Riemeiereyoung Lumapay | HighLevel CRM & Automation</title>
+    <meta name="description" content="Cebu-based HighLevel CRM and AI automation specialist. Funnels, workflows and app integrations with Zapier, Make and n8n." />
+    <meta name="author" content="Riemeiereyoung V. Lumapay" />
     <meta name="robots" content="index, follow, max-image-preview:large" />
     <!-- The browser bar takes the page colour (--cream per theme); the inline
          theme script below and lib/theme.ts keep it in step with the toggle.
          Literal hex here only because this runs before any stylesheet loads. -->
-    <meta name="theme-color" content="#F4F4ED" />
+    <meta name="theme-color" content="#09060f" />
     <!-- <link rel="canonical" href="https://yoursite.com/" /> -->
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -24,30 +24,30 @@
 
     <!-- The rail avatar is above the fold on every desktop route. Keep this in
          sync with profile.avatarSrc in src/data/profile.ts. -->
-    <link rel="preload" as="image" href="/avatar.svg" fetchpriority="high" media="(min-width: 1100px)" />
+    <link rel="preload" as="image" href="/riem-portrait.png" fetchpriority="high" media="(min-width: 1100px)" />
 
     <!-- Open Graph / social share. og:image must be an absolute URL once you deploy. -->
     <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Your Name" />
-    <meta property="og:title" content="Your Name - Your Title" />
-    <meta property="og:description" content="PLACEHOLDER - one sentence on what you do and who you do it for." />
+    <meta property="og:site_name" content="Riemeiereyoung V. Lumapay" />
+    <meta property="og:title" content="Riemeiereyoung Lumapay | HighLevel CRM & Automation" />
+    <meta property="og:description" content="Cebu-based HighLevel CRM and AI automation specialist. Funnels, workflows and app integrations with Zapier, Make and n8n." />
     <!-- <meta property="og:url" content="https://yoursite.com/" /> -->
     <!-- <meta property="og:image" content="https://yoursite.com/share.png" /> -->
     <meta name="twitter:card" content="summary_large_image" />
 
     <!-- Theme before first paint: no flash of the wrong palette. Default is
-         light; dark is the visitor's opt-in, persisted in localStorage. -->
+         black and violet; a visitor's explicit light choice is persisted in localStorage. -->
     <script>
       (function () {
         try {
           document.documentElement.dataset.theme =
-            localStorage.getItem('theme') === 'dark' ? 'dark' : 'light';
+            localStorage.getItem('riem-theme') === 'light' ? 'light' : 'dark';
         } catch (e) {
-          document.documentElement.dataset.theme = 'light';
+          document.documentElement.dataset.theme = 'dark';
         }
         if (document.documentElement.dataset.theme === 'dark') {
           var bar = document.querySelector('meta[name="theme-color"]');
-          if (bar) bar.setAttribute('content', '#070B14');
+          if (bar) bar.setAttribute('content', '#09060f');
         }
       })();
     </script>
