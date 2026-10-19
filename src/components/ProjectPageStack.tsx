@@ -16,10 +16,10 @@ export default function ProjectPageStack() {
       <span className="project-stack__impact" />
     </div>
     <div className="project-stack__scene">
-      {projectPreviews.map((page, i) => <div className={`project-stack__page${i < 2 ? ' project-stack__page--crm' : ''}`} key={page.image} style={{ '--page': i, '--delay': `${i * 5 - 30}s` } as CSSProperties}>
+      {projectPreviews.map((page, i) => <div className={`project-stack__page${i < 2 ? ' project-stack__page--crm' : ''}`} key={page.image} style={{ '--page': i, '--delay': `${i * 5 - projectPreviews.length * 5}s` } as CSSProperties}>
         <div className="project-stack__chrome"><span>{page.kind}</span></div>
         <div className="project-stack__viewport"><img src={page.image} alt="" loading="lazy" decoding="async" /></div>
-        <div className="project-stack__caption"><span>{page.title}</span><small>{String(i+1).padStart(2,'0')} / 06</small></div>
+        <div className="project-stack__caption"><span>{page.title}</span><small>{String(i+1).padStart(2,'0')} / {String(projectPreviews.length).padStart(2, '0')}</small></div>
       </div>)}
     </div>
   </div>

@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { ArrowUpRight } from '@/components/slab'
 import { profile } from '@/data/profile'
 import ToolsMarquee from './ToolsMarquee'
+import ToolsMascot from './ToolsMascot'
 import HomeBento from './HomeBento'
 import { HomeProfile, HomeStats, HomeExplore } from './HomeMobile'
 import { useScrollReveal } from '@/hooks/useScrollReveal'
@@ -64,6 +65,7 @@ export default function Home() {
           objects - a strip you read across and a grid you pick from - and one
           shared sheet made the strip look like the bento's header. */}
       <div className="home__glass home__glass--tools">
+        <ToolsMascot />
         <div className="home__tools">
           <div className="home__tools-head">
             <span className="home__tools-eyebrow">Daily drivers</span>

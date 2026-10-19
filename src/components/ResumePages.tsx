@@ -31,10 +31,22 @@ const projects = [
     'Automated booking messages, confirmations, timed return reminders and completion follow-up, with human checkpoints for deposits and vehicle inspection.',
   ] },
 ]
+const n8nProjects = [
+  { n: '07', name: 'Polaris — AI Playbook Assistant', stack: 'n8n · Google Drive · Pinecone · OpenAI · Simple Memory', image: '/projects/n8n/polaris-workflow.png', pdf: '/projects/n8n/polaris-ai-playbook-assistant.pdf', summary: 'Ask a PDF playbook questions in plain language, then continue with related follow-ups.', details: [
+    'Built a document-loading workflow that downloads the PDF, splits it into passages, creates embeddings and stores the knowledge in Pinecone.',
+    'Connected a conversational agent to document retrieval, an OpenAI chat model and session memory.',
+    'Documented a successful loading run and the connected chat architecture. Answer accuracy and time savings were not measured in the supplied evidence.',
+  ] },
+  { n: '08', name: 'Customer Order Notification', stack: 'n8n · Google Sheets · OpenAI · Gmail', image: '/projects/n8n/customer-order-notification.png', pdf: '/projects/n8n/customer-order-notification.pdf', summary: 'Turn spreadsheet order data into structured team notification emails.', details: [
+    'Connected a Google Sheets trigger to an LLM chain, an OpenAI model and a structured output parser for the email subject and body.',
+    'Formatted spreadsheet dates and HTML line breaks before passing the generated content to Gmail.',
+    'Documented a successful eight-item run and a received example notification. Repeat-notification tracking and error alerts are listed as future improvements.',
+  ] },
+]
 export function Projects() {
   const { hash } = useLocation()
   useEffect(() => {
-    if (!/^#project-0[1-6]$/.test(hash)) return
+    if (!/^#project-0[1-8]$/.test(hash)) return
     const frame = requestAnimationFrame(() => {
       const target = document.getElementById(hash.slice(1))
       target?.scrollIntoView({ block: 'start', behavior: 'instant' })
@@ -47,7 +59,15 @@ export function Projects() {
       <div className="resume-project__visual"><span className="resume-index">PROJECT {p.n}</span><img src={p.image} alt={`${p.name}: illustrative process overview`} /></div>
       <div className="resume-project__copy"><span className="resume-kicker">{p.stack}</span><h2>{p.name}</h2><p>{p.summary}</p><ul className="resume-list">{p.details.map(d=><li key={d}><CheckCircle size={18} aria-hidden="true" /><span>{d}</span></li>)}</ul><Action href={PORTFOLIO}>View project portfolio</Action></div>
     </article>)}
-    <section className="funnel-gallery" aria-label="Funnel designs"><header><span className="resume-kicker">Funnel design</span><h2>Landing pages built to guide the next step.</h2></header><div className="funnel-gallery__grid">{projectPreviews.slice(2).map((p, i) => <a id={`project-0${i + 3}`} href={p.full} target="_blank" rel="noopener noreferrer" key={p.image}><img src={p.image} alt={`${p.title} landing page preview`} loading="lazy"/><span>{p.title}<ArrowUpRight size={16}/></span><small>Open full page</small></a>)}</div></section>
+    <section className="n8n-projects" aria-labelledby="n8n-projects-title">
+      <header className="n8n-projects__head"><span className="resume-kicker">n8n · AI & workflow automation</span><h2 id="n8n-projects-title">From useful knowledge to everyday operations.</h2><p>Two documented builds, with the workflow, implementation decisions and execution evidence inside each case study.</p></header>
+      {n8nProjects.map(p => <article className="resume-project n8n-project" id={`project-${p.n}`} tabIndex={-1} key={p.n}>
+        <div className="resume-project__visual"><span className="resume-index">PROJECT {p.n} · 6-PAGE CASE STUDY</span><a href={p.pdf} target="_blank" rel="noopener noreferrer" aria-label={`Read ${p.name} PDF`}><img src={p.image} alt={`${p.name}: documented n8n workflow`} loading="lazy" /></a></div>
+        <div className="resume-project__copy"><span className="resume-kicker">{p.stack}</span><h2>{p.name}</h2><p>{p.summary}</p><ul className="resume-list">{p.details.map(d => <li key={d}><CheckCircle size={18} aria-hidden="true" /><span>{d}</span></li>)}</ul><Action href={p.pdf}>Read full case study · PDF</Action></div>
+        <details className="n8n-project__pdf"><summary>Preview the case study here</summary><iframe src={`${p.pdf}#view=FitH`} title={`${p.name} — six-page PDF case study`} loading="lazy" /><p><a href={p.pdf} target="_blank" rel="noopener noreferrer">Open PDF in a new tab</a></p></details>
+      </article>)}
+    </section>
+    <section className="funnel-gallery" aria-label="Funnel designs"><header><span className="resume-kicker">Funnel design</span><h2>Landing pages built to guide the next step.</h2></header><div className="funnel-gallery__grid">{projectPreviews.slice(2, 6).map((p, i) => <a id={`project-0${i + 3}`} href={p.full} target="_blank" rel="noopener noreferrer" key={p.image}><img src={p.image} alt={`${p.title} landing page preview`} loading="lazy"/><span>{p.title}<ArrowUpRight size={16}/></span><small>Open full page</small></a>)}</div></section>
     <p className="resume-footnote">Process illustrations summarize the projects described in my resume.</p>
   </Page>
 }

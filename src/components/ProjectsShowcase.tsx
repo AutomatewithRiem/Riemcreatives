@@ -28,7 +28,7 @@ export default function ProjectsShowcase() {
     <div className="projects-showcase__stage">
       <div className="projects-showcase__glow" />
       {projectPreviews.map((page, i) => {
-        const offset = ((i - active + 9) % 6) - 3
+        const offset = ((i - active + projectPreviews.length + Math.floor(projectPreviews.length / 2)) % projectPreviews.length) - Math.floor(projectPreviews.length / 2)
         const distance = Math.abs(offset)
         return <Link to={`/projects#project-0${i + 1}`} key={page.image} className={`projects-showcase__page${i < 2 ? ' projects-showcase__page--crm' : ''}`} data-center={offset === 0} tabIndex={distance < 2 ? 0 : -1} aria-hidden={distance >= 2} aria-label={`View ${page.title} project details`} style={{ '--offset': offset, '--distance': distance, zIndex: 5 - distance, opacity: distance < 2 ? 1 : 0, pointerEvents: distance < 2 ? 'auto' : 'none' } as CSSProperties} onPointerEnter={() => setHovered(true)} onPointerLeave={() => setHovered(false)}>
           <div className="projects-showcase__image"><img src={page.image} alt="" /></div><span>{page.title}<small>{page.kind} ↗</small></span>
