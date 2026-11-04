@@ -1,0 +1,230 @@
+[
+  {
+    "source": "/Users/yam/Downloads/portfolio/Workflow Projects/AI AGENT N8N 2.png",
+    "asset": "public/projects/workflows/originals/email-inventory-agent-01.png",
+    "sha256": "ae3fe624af3477434e67a1ba8e49cd1af47cf9e0f174279769cef23e8f0013e8",
+    "project": "email-inventory-agent"
+  },
+  {
+    "source": "/Users/yam/Downloads/portfolio/WORKFLOWS/AI AGENT_N8N WORKFLOW.jpg",
+    "asset": "public/projects/workflows/originals/email-inventory-agent-02.jpg",
+    "sha256": "b727db323073911cc2394169833858c87cb2374adc5ac50b4f87174658870618",
+    "project": "email-inventory-agent"
+  },
+  {
+    "source": "/Users/yam/Downloads/portfolio/Workflow Projects/AI AGENT N8N.png",
+    "asset": "public/projects/workflows/originals/rag-chatbot-01.png",
+    "sha256": "ca04d42cba6eecf75fd503028faf7233a8f08956a41126ffbdd1ba7878f89eb6",
+    "project": "rag-chatbot"
+  },
+  {
+    "source": "/Users/yam/Downloads/portfolio/WORKFLOWS/RAGPIPELINECHATBOT_N8N.jpg",
+    "asset": "public/projects/workflows/originals/rag-chatbot-02.jpg",
+    "sha256": "7131a8953ae1cd8c98bb4f250161acaa1952e0ed9ad3e5fa46d8702205574c5f",
+    "project": "rag-chatbot"
+  },
+  {
+    "source": "/Users/yam/Downloads/portfolio/Workflow Projects/CUSTOMER SUPPORT AI AGENT N8N.png",
+    "asset": "public/projects/workflows/originals/customer-support-agent-01.png",
+    "sha256": "964f1e207c1ef897c25f1d27b8ac95e2b33ae566817e8d56e5d9d76728886204",
+    "project": "customer-support-agent"
+  },
+  {
+    "source": "/Users/yam/Downloads/portfolio/WORKFLOWS/CUSTOMER SUPPORT_N8N.jpg",
+    "asset": "public/projects/workflows/originals/customer-support-agent-02.jpg",
+    "sha256": "dff50be079a5fa43aac0d6928bb255eaca88e9d9808e48dcba9c3587b0ebddf9",
+    "project": "customer-support-agent"
+  },
+  {
+    "source": "/Users/yam/Downloads/portfolio/Workflow Projects/INVENTORY AI AGENT MAKE.png",
+    "asset": "public/projects/workflows/originals/inventory-make-01.png",
+    "sha256": "050cf354f64c380cf589e24c2adaf1c00e1b8de002f1a2f4bcfd851cb85aaee0",
+    "project": "inventory-make"
+  },
+  {
+    "source": "/Users/yam/Downloads/portfolio/WORKFLOWS/aiworkflow_make.jpg",
+    "asset": "public/projects/workflows/originals/inventory-make-02.jpg",
+    "sha256": "ce893369d98474c1528c8589568accf1e12a26e2d4d06881fe9d944ff88b34c0",
+    "project": "inventory-make"
+  },
+  {
+    "source": "/Users/yam/Downloads/portfolio/Workflow Projects/BOOKINGHL.png",
+    "asset": "public/projects/workflows/originals/appointment-highlevel-01.png",
+    "sha256": "bfcc39d86e32839fd2b2f9bfbde53aa36202c266143765498b0edb0556a75fd8",
+    "project": "appointment-highlevel"
+  },
+  {
+    "source": "/Users/yam/Downloads/portfolio/WORKFLOWS/APPOINTMENT_GHL.jpg",
+    "asset": "public/projects/workflows/originals/appointment-highlevel-02.jpg",
+    "sha256": "a0aeeb6a93f84795ee7fb0bf0333f6ccbd54a915564b4ac29220c9c3ae477d0a",
+    "project": "appointment-highlevel"
+  },
+  {
+    "source": "/Users/yam/Downloads/portfolio/Workflow Projects/COURSEHL.png",
+    "asset": "public/projects/workflows/originals/course-highlevel-01.png",
+    "sha256": "b3f2a7453a00366812b44958ef972d654c26a6834c211efc999acbc77400d7b5",
+    "project": "course-highlevel"
+  },
+  {
+    "source": "/Users/yam/Downloads/portfolio/WORKFLOWS/COURSE_GHL.jpg",
+    "asset": "public/projects/workflows/originals/course-highlevel-02.jpg",
+    "sha256": "6a62872b7fccc6de2b6441b930047278757d565e1e0110c18d196a655a89e8aa",
+    "project": "course-highlevel"
+  },
+  {
+    "source": "/Users/yam/Downloads/portfolio/Workflow Projects/LEADHL.png",
+    "asset": "public/projects/workflows/originals/lead-highlevel-01.png",
+    "sha256": "e9dbd80e4bebe1d97efa453b340e13b2b0b938291bb53342dfca28a328181af5",
+    "project": "lead-highlevel"
+  },
+  {
+    "source": "/Users/yam/Downloads/portfolio/WORKFLOWS/LEAD_GHL.jpg",
+    "asset": "public/projects/workflows/originals/lead-highlevel-02.jpg",
+    "sha256": "2425c436a00c8efad4455e9ed0e21cf38e5eee760e666f2ae0bc8c4f8c736ec9",
+    "project": "lead-highlevel"
+  },
+  {
+    "source": "/Users/yam/Downloads/portfolio/Workflow Projects/MASTERCLASSHL.png",
+    "asset": "public/projects/workflows/originals/masterclass-highlevel-01.png",
+    "sha256": "1361612bb473d679c7f0f7c4dd59675b785cd47e448a7611edb6df98ecd1d39c",
+    "project": "masterclass-highlevel"
+  },
+  {
+    "source": "/Users/yam/Downloads/portfolio/WORKFLOWS/MASTERCLASS_GHL.jpg",
+    "asset": "public/projects/workflows/originals/masterclass-highlevel-02.jpg",
+    "sha256": "5ab4290cd0aa7d49901324f38d038808dd128173499578ebdab9b0dd490f66f1",
+    "project": "masterclass-highlevel"
+  },
+  {
+    "source": "/Users/yam/Downloads/portfolio/Workflow Projects/SURVEYHL.png",
+    "asset": "public/projects/workflows/originals/survey-highlevel-01.png",
+    "sha256": "ec7809103edc69b47108629deeabfb0cf29df9aebce192b359b0807eadea2b32",
+    "project": "survey-highlevel"
+  },
+  {
+    "source": "/Users/yam/Downloads/portfolio/WORKFLOWS/DISCOVERY_GHL.jpg",
+    "asset": "public/projects/workflows/originals/survey-highlevel-02.jpg",
+    "sha256": "dbe43e740db8a6af03ea553e14142a98b996bb764456e49044c12a07b257f1c0",
+    "project": "survey-highlevel"
+  },
+  {
+    "source": "/Users/yam/Downloads/portfolio/WORKFLOWS/SURVEY_GHL.jpg",
+    "asset": "public/projects/workflows/originals/survey-highlevel-03.jpg",
+    "sha256": "3078fae631dabfd903e8bdea985d5e8ec238c9110110ee985708a0e315738a14",
+    "project": "survey-highlevel"
+  },
+  {
+    "source": "/Users/yam/Downloads/portfolio/Workflow Projects/GENADHL.png",
+    "asset": "public/projects/workflows/originals/general-event-highlevel-01.png",
+    "sha256": "c06d4bc16664ad20a33f35065d088a4c991a8736f1d1bb69fba9d66ffe8461a0",
+    "project": "general-event-highlevel"
+  },
+  {
+    "source": "/Users/yam/Downloads/portfolio/WORKFLOWS/EVENTFUNNEL_GEN-AD_GHL.jpg",
+    "asset": "public/projects/workflows/originals/general-event-highlevel-02.jpg",
+    "sha256": "4dc931299948de9b2c25f922bac81d085dccf64baa3668a90755ee20715ebe07",
+    "project": "general-event-highlevel"
+  },
+  {
+    "source": "/Users/yam/Downloads/portfolio/Workflow Projects/VIPHL.png",
+    "asset": "public/projects/workflows/originals/vip-event-highlevel-01.png",
+    "sha256": "0afe47969db84e94b7fe1a1bedc5ecbe8fcf76746ede3cb360c787dfdd9f5d36",
+    "project": "vip-event-highlevel"
+  },
+  {
+    "source": "/Users/yam/Downloads/portfolio/WORKFLOWS/EVENTFUNNEL_VIP_GHL.jpg",
+    "asset": "public/projects/workflows/originals/vip-event-highlevel-02.jpg",
+    "sha256": "f43b3b821d558d15788c092768424a6d55daf679bd8202870a83e0b7ef956dcc",
+    "project": "vip-event-highlevel"
+  },
+  {
+    "source": "/Users/yam/Downloads/portfolio/Workflow Projects/ECOM ZAPIER.png",
+    "asset": "public/projects/workflows/originals/ecommerce-journey-01.png",
+    "sha256": "977274b2f0a79d6563686997f45428d43d4ce3aa91818d0caa717ea7739dea6f",
+    "project": "ecommerce-journey"
+  },
+  {
+    "source": "/Users/yam/Downloads/portfolio/Workflow Projects/ECOM ZAPIER2.png",
+    "asset": "public/projects/workflows/originals/ecommerce-journey-02.png",
+    "sha256": "4672a234d219fcc85a1b0c07268b32a656112b47ef18770d1d5d0b1a6bd6d2d2",
+    "project": "ecommerce-journey"
+  },
+  {
+    "source": "/Users/yam/Downloads/portfolio/Workflow Projects/ECOM ZAPIER3.png",
+    "asset": "public/projects/workflows/originals/ecommerce-journey-03.png",
+    "sha256": "26684c0cf0d92089877218ef3fe2be1ee36798d34e0b6493a0351f215d1b9367",
+    "project": "ecommerce-journey"
+  },
+  {
+    "source": "/Users/yam/Downloads/portfolio/Workflow Projects/ECOM ZAPIER4.png",
+    "asset": "public/projects/workflows/originals/ecommerce-journey-04.png",
+    "sha256": "d0587c262712cfe20b8ef8db95d05ca896cc0d87fed949b7c47873bb3e492b73",
+    "project": "ecommerce-journey"
+  },
+  {
+    "source": "/Users/yam/Downloads/portfolio/Workflow Projects/ECOM ZAPIER5.png",
+    "asset": "public/projects/workflows/originals/ecommerce-journey-05.png",
+    "sha256": "418832ffbb9bc8559c5dbb0ea7c1b0c512113fd21d8f3eb9b21a5fa01a3bb579",
+    "project": "ecommerce-journey"
+  },
+  {
+    "source": "/Users/yam/Downloads/portfolio/WORKFLOWS/ecom_zap.jpg",
+    "asset": "public/projects/workflows/originals/ecommerce-journey-06.jpg",
+    "sha256": "15bc56ec5b52bfb979bd0f6bf35c58bb7730671d6c4d2bf3ec458e21ceaf4a35",
+    "project": "ecommerce-journey"
+  },
+  {
+    "source": "/Users/yam/Downloads/portfolio/WORKFLOWS/ECOM1.jpg",
+    "asset": "public/projects/workflows/originals/ecommerce-journey-07.jpg",
+    "sha256": "817d6f6947ba14d44d0a3aeeddcaf16ab1dbc2809dfb06412d100d60340b2a5f",
+    "project": "ecommerce-journey"
+  },
+  {
+    "source": "/Users/yam/Downloads/portfolio/WORKFLOWS/ecom2_zap.jpg",
+    "asset": "public/projects/workflows/originals/ecommerce-journey-08.jpg",
+    "sha256": "e04a24f808e6b5b97f2f260524e7cd1d0fade2ea6bad91ee712978bbcb22afa1",
+    "project": "ecommerce-journey"
+  },
+  {
+    "source": "/Users/yam/Downloads/portfolio/WORKFLOWS/ECOM2.jpg",
+    "asset": "public/projects/workflows/originals/ecommerce-journey-09.jpg",
+    "sha256": "fbad64b9f22988647368792d9fd9938f8e55a8883013bfa604442800ca4596fc",
+    "project": "ecommerce-journey"
+  },
+  {
+    "source": "/Users/yam/Downloads/portfolio/WORKFLOWS/ecom3_zap.jpg",
+    "asset": "public/projects/workflows/originals/ecommerce-journey-10.jpg",
+    "sha256": "b2a1ad4070883eb2b73fe950c9e915a0e10be92e68537ea5a2015c27250eb8bf",
+    "project": "ecommerce-journey"
+  },
+  {
+    "source": "/Users/yam/Downloads/portfolio/WORKFLOWS/ECOM3.jpg",
+    "asset": "public/projects/workflows/originals/ecommerce-journey-11.jpg",
+    "sha256": "6adec9e591dbd969c71ff7745e92c215d50ac41278c88750e57917fd72122f08",
+    "project": "ecommerce-journey"
+  },
+  {
+    "source": "/Users/yam/Downloads/portfolio/WORKFLOWS/ECOM4.jpg",
+    "asset": "public/projects/workflows/originals/ecommerce-journey-12.jpg",
+    "sha256": "d2b1a2e8e4a06f5c6724d670cbf1c9772cc2b7cf7cb2e05070a24766d45e9028",
+    "project": "ecommerce-journey"
+  },
+  {
+    "source": "/Users/yam/Downloads/portfolio/WORKFLOWS/ECOMM_GHL.jpg",
+    "asset": "public/projects/workflows/originals/ecommerce-journey-13.jpg",
+    "sha256": "bd72f61c74f164bd77cea5b60f3eb34d5e0cf4e9a3e88cead1e6fb2842a3e7e8",
+    "project": "ecommerce-journey"
+  },
+  {
+    "source": "/Users/yam/Downloads/portfolio/Workflow Projects/GSHEET ZAPIER.png",
+    "asset": "public/projects/workflows/originals/weekly-sheets-01.png",
+    "sha256": "e33d08fd825acf653ab79938286ea3106ecfdc62629efc848859a59e2c74f50b",
+    "project": "weekly-sheets"
+  },
+  {
+    "source": "/Users/yam/Downloads/portfolio/WORKFLOWS/zap.jpg",
+    "asset": "public/projects/workflows/originals/weekly-sheets-02.jpg",
+    "sha256": "f9060d6e19ade7d5a447107dd65e02cb6395d93af4345c9f5324113a61bbfcd9",
+    "project": "weekly-sheets"
+  }
+]

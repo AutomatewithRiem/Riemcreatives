@@ -4,6 +4,7 @@ import { ArrowUpRight, CheckCircle } from '@/components/slab'
 import { profile } from '@/data/profile'
 import { projectPreviews } from '@/data/project-previews'
 import ProjectsShowcase from './ProjectsShowcase'
+import WorkflowProjects from './WorkflowProjects'
 
 const PORTFOLIO = 'https://drive.google.com/drive/folders/17AuRvto-oqrAgaaXED7a20bb4FQP2ToT?usp=sharing'
 const RESUME = '/riem-lumapay-resume.pdf'
@@ -54,7 +55,8 @@ export function Projects() {
     })
     return () => cancelAnimationFrame(frame)
   }, [hash])
-  return <Page feature={<ProjectsShowcase />} eyebrow="Selected projects" title="Ideas turned into connected systems." intro="Explore my work in HighLevel CRM, funnel design, and workflow automation.">
+  return <Page feature={<><ProjectsShowcase /><a className="workflow-library__jump" href="#workflow-projects">Browse workflow projects ↓</a></>} eyebrow="Selected projects" title="Ideas turned into connected systems." intro="Explore my work in HighLevel CRM, funnel design, and workflow automation.">
+    <WorkflowProjects />
     {projects.map(p => <article className="resume-project" id={`project-${p.n}`} tabIndex={-1} key={p.n}>
       <div className="resume-project__visual"><span className="resume-index">PROJECT {p.n}</span><img src={p.image} alt={`${p.name}: illustrative process overview`} /></div>
       <div className="resume-project__copy"><span className="resume-kicker">{p.stack}</span><h2>{p.name}</h2><p>{p.summary}</p><ul className="resume-list">{p.details.map(d=><li key={d}><CheckCircle size={18} aria-hidden="true" /><span>{d}</span></li>)}</ul><Action href={PORTFOLIO}>View project portfolio</Action></div>
