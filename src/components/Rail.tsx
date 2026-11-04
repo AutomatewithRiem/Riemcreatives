@@ -12,6 +12,7 @@ import {
 } from './RailIcons'
 import { getTheme, toggleTheme, type Theme } from '@/lib/theme'
 import { profile } from '@/data/profile'
+import VisitCounter from './VisitCounter'
 
 /**
  * The profile rail: the fixed left column of the shell. It carries identity,
@@ -107,6 +108,7 @@ export default function Rail() {
         </nav>
 
         <p className="rail__copy">
+          <VisitCounter />
           &copy; {new Date().getFullYear()}
           <br />
           {profile.name}. All rights reserved.

@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { CaretRight, Stack, Coffee } from '@/components/slab'
 import { profile } from '@/data/profile'
 import QuickMenu from './QuickMenu'
+import VisitCounter from './VisitCounter'
 import ProjectPageStack from './ProjectPageStack'
 import { openProjectGallery } from './ProjectGallery'
 
@@ -27,6 +28,7 @@ export function HomeProfile() {
         <span className="hprofile__handle">
           {profile.handle}
         </span>
+        <VisitCounter />
       </div>
       <QuickMenu className="hprofile__menu" />
     </header>

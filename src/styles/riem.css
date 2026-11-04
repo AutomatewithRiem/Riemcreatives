@@ -366,3 +366,7 @@ html[data-perf='low'] .home__cta-nerve rect { animation: none; }
 @media (max-width: 640px) { .tools-mascot { width: 92px; height: 97px; top: -66px; right: 6px; } .home__tools-head { padding-right: 94px; min-height: 28px; } }
 @media (prefers-reduced-motion: reduce) { .tools-mascot g { animation: none; } }
 [data-a11y-motion='true'] .tools-mascot g, [data-perf='low'] .tools-mascot g { animation: none; }
+
+.visit-counter { display: flex; align-items: center; gap: 7px; font-size: 12px; line-height: 1.5; color: var(--muted); font-variant-numeric: tabular-nums; }
+.rail__copy .visit-counter { margin-bottom: 10px; }
+.hprofile .visit-counter { margin-top: 4px; font-size: 10px; }
