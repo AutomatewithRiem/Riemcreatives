@@ -10,7 +10,7 @@ const PORTFOLIO = 'https://drive.google.com/drive/folders/17AuRvto-oqrAgaaXED7a2
 const RESUME = '/riem-lumapay-resume.pdf'
 
 function Page({ eyebrow, title, intro, children, feature }: { eyebrow: string; title: string; intro: string; children: ReactNode; feature?: ReactNode }) {
-  return <section className={`pgrid resume-page${feature ? ' resume-page--projects' : ''}`} aria-label={eyebrow}>
+  return <section className={`pgrid resume-page${feature ? ' resume-page--projects' : ''}`} data-lenis-prevent={feature ? true : undefined} aria-label={eyebrow}>
     <header className="pgrid__head"><span className="pgrid__eyebrow">{eyebrow}</span><h1 className="pgrid__title">{title}</h1><p className="pgrid__lede">{intro}</p></header>
     {feature}
     <div className="home__glass resume-sheet">{children}</div>
