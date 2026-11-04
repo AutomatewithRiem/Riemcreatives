@@ -425,3 +425,20 @@ html[data-perf='low'] .home__cta-nerve rect { animation: none; }
 .project-orbit__index button { padding: 10px 14px; min-height: 44px; color: #e6cfff; background: #241333; border: 1px solid #a56aef55; border-radius: 8px; font-size: 12px; }
 .workflow-library__grid li { scroll-margin-top: 24px; }
 @media(max-width:600px) { .projects-showcase-layers { gap: 20px; } .project-orbit__controls { flex-wrap: wrap; } .project-orbit__index { justify-content: flex-start; } }
+
+/* A single visible collection: no layers, overlapping cards or hidden slides. */
+.all-projects { min-width: 0; }
+.all-projects__head { margin-bottom: 24px; }
+.all-projects__head h2 { margin: 0 0 8px; font-size: 28px; }
+.all-projects__head p, .all-projects > p { color: var(--muted); font-size: 15px; }
+.all-projects__grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px 22px; list-style: none; padding: 0; margin: 0; }
+.all-projects__grid > li { min-width: 0; }
+.all-projects__card { display: flex; flex-direction: column; align-items: stretch; width: 100%; height: 100%; padding: 0; border: 0; border-radius: 12px; text-align: left; text-decoration: none; background: #160e22; color: #f7efff; overflow: hidden; cursor: pointer; font: inherit; }
+.all-projects__card img { display: block; width: 100%; aspect-ratio: 1; object-fit: contain; background: #100a19; }
+.all-projects__kind { padding: 16px 16px 0; color: #bda4d5; font-size: 12px; }
+.all-projects__card h3 { padding: 0 16px; margin: 8px 0 16px; font-size: 18px; line-height: 1.4; }
+.all-projects__action { display: block; padding: 0 16px 16px; margin-top: auto; color: #c99bff; font-size: 13px; }
+.all-projects__card:focus-visible { outline: 3px solid #d39bff; outline-offset: 5px; }
+.project-gallery__header { position: sticky; top: 0; z-index: 3; background: #09060ff5; padding: 16px 0; }
+@media(max-width:1200px) { .all-projects__grid { grid-template-columns: repeat(2, minmax(0,1fr)); } }
+@media(max-width:600px) { .all-projects__grid { grid-template-columns: 1fr; gap: 24px; } .all-projects__card h3 { font-size: 20px; } }

@@ -1,50 +1,13 @@
-import { useEffect, useState, type CSSProperties } from 'react'
 import { Link } from 'react-router-dom'
-import { carouselLayers } from '@/data/carousel-projects'
-import { A11Y_EVENT, motionReduced } from '@/lib/a11y'
+import { carouselProjects } from '@/data/carousel-projects'
 
-/** Reflective three-page carousel with manual controls and an accessible motion fallback. */
+/** Every project remains visible in the page flow, with no carousel or hidden slides. */
 export default function ProjectsShowcase() {
-  return <div className="projects-showcase-layers">{carouselLayers.map((projects, i) => <CarouselLayer key={i} projectPreviews={projects} layer={i + 1} />)}</div>
-}
-
-function CarouselLayer({ projectPreviews, layer }: { projectPreviews: (typeof carouselLayers)[number]; layer: number }) {
-  const [active, setActive] = useState(0)
-  const [paused, setPaused] = useState(false)
-  const [hovered, setHovered] = useState(false)
-  const [focused, setFocused] = useState(false)
-  const [still, setStill] = useState(false)
-  useEffect(() => {
-    const media = matchMedia('(prefers-reduced-motion: reduce)')
-    const sync = () => setStill(media.matches || motionReduced() || document.documentElement.dataset.perf === 'low')
-    sync(); media.addEventListener('change', sync); window.addEventListener(A11Y_EVENT, sync)
-    const observer = new MutationObserver(sync)
-    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-perf', 'data-a11y-motion'] })
-    return () => { media.removeEventListener('change', sync); window.removeEventListener(A11Y_EVENT, sync); observer.disconnect() }
-  }, [])
-  useEffect(() => {
-    if (paused || hovered || focused || still) return
-    const timer = window.setInterval(() => { if (!document.hidden) setActive(i => (i + 1) % projectPreviews.length) }, 4200)
-    return () => clearInterval(timer)
-  }, [paused, hovered, focused, still, projectPreviews.length])
-  const step = (n: number) => setActive(i => (i + n + projectPreviews.length) % projectPreviews.length)
-  return <section className="projects-showcase" aria-label={`Project carousel layer ${layer}`} aria-roledescription="carousel" onFocusCapture={() => setFocused(true)} onBlurCapture={event => { if (!event.currentTarget.contains(event.relatedTarget)) setFocused(false) }}>
-    <h2 className="projects-showcase__layer-title">Layer {layer} <small>{projectPreviews.length} projects</small></h2>
-    <div className="projects-showcase__stage">
-      <div className="projects-showcase__glow" />
-      {projectPreviews.map((page, i) => {
-        const offset = ((i - active + projectPreviews.length + Math.floor(projectPreviews.length / 2)) % projectPreviews.length) - Math.floor(projectPreviews.length / 2)
-        const distance = Math.abs(offset)
-        return <Link to={page.href} key={page.image} className="projects-showcase__page projects-showcase__page--complete" data-center={offset === 0} tabIndex={distance < 2 ? 0 : -1} aria-hidden={distance >= 2} aria-label={`View ${page.title} project details`} style={{ '--offset': offset, '--distance': distance, zIndex: 5 - distance, opacity: distance < 2 ? 1 : 0, pointerEvents: distance < 2 ? 'auto' : 'none' } as CSSProperties} onPointerEnter={() => setHovered(true)} onPointerLeave={() => setHovered(false)}>
-          <div className="projects-showcase__image"><img src={page.image} alt="" /></div><span>{page.title}<small>{page.kind} ↗</small></span>
-        </Link>
-      })}
-    </div>
-    <div className="projects-showcase__footer">
-      <div className="projects-showcase__arrows"><button type="button" onClick={() => step(-1)} aria-label="Previous featured project">←</button><button type="button" onClick={() => step(1)} aria-label="Next featured project">→</button></div>
-      <div className="projects-showcase__dots" aria-label="Choose featured project">{projectPreviews.map((p, i) => <button key={p.image} type="button" aria-label={`Show ${p.title}`} aria-pressed={i === active} onClick={() => setActive(i)} />)}</div>
-      <button className="projects-showcase__pause" type="button" onClick={() => setPaused(p => !p)} aria-pressed={paused}>{paused ? 'Play' : 'Pause'}</button>
-    </div>
-    <p className="projects-showcase__hint">Select a page to explore the project.</p>
+  return <section className="all-projects" aria-labelledby="all-projects-title">
+    <header className="all-projects__head"><h2 id="all-projects-title">All projects</h2><p>{carouselProjects.length} individual items. Select any project to explore its details.</p></header>
+    <ul className="all-projects__grid">{carouselProjects.map(item => <li key={item.href}><Link className="all-projects__card" to={item.href}>
+      <img src={item.image} alt={item.title} loading="lazy" decoding="async" />
+      <span className="all-projects__kind">{item.kind}</span><h3>{item.title}</h3><span className="all-projects__action">View project ↗</span>
+    </Link></li>)}</ul>
   </section>
 }
