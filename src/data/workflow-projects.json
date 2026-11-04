@@ -1,298 +1,433 @@
 [
   {
-    "slug": "email-inventory-agent",
-    "title": "Email & inventory AI agent",
+    "slug": "email-inventory-agent-01",
+    "title": "Email & inventory AI agent \u2014 Project overview",
     "platforms": [
       "n8n"
     ],
     "summary": "Classify incoming order emails, extract order details and route records into Google Sheets.",
-    "preview": "/projects/workflows/previews/email-inventory-agent.jpg",
-    "images": [
-      {
-        "src": "/projects/workflows/originals/email-inventory-agent-01.png",
-        "caption": "Project overview"
-      },
-      {
-        "src": "/projects/workflows/originals/email-inventory-agent-02.jpg",
-        "caption": "Email classification and order routing"
-      }
-    ]
+    "preview": "/projects/workflows/previews/email-inventory-agent-01.jpg",
+    "image": "/projects/workflows/originals/email-inventory-agent-01.png",
+    "caption": "Project overview"
   },
   {
-    "slug": "rag-chatbot",
-    "title": "RAG pipeline & chatbot",
+    "slug": "email-inventory-agent-02",
+    "title": "Email & inventory AI agent \u2014 Email classification and order routing",
+    "platforms": [
+      "n8n"
+    ],
+    "summary": "Classify incoming order emails, extract order details and route records into Google Sheets.",
+    "preview": "/projects/workflows/previews/email-inventory-agent-02.jpg",
+    "image": "/projects/workflows/originals/email-inventory-agent-02.jpg",
+    "caption": "Email classification and order routing"
+  },
+  {
+    "slug": "rag-chatbot-01",
+    "title": "RAG pipeline & chatbot \u2014 Project overview",
     "platforms": [
       "n8n"
     ],
     "summary": "Connect document ingestion and vector search to a conversational AI agent.",
-    "preview": "/projects/workflows/previews/rag-chatbot.jpg",
-    "images": [
-      {
-        "src": "/projects/workflows/originals/rag-chatbot-01.png",
-        "caption": "Project overview"
-      },
-      {
-        "src": "/projects/workflows/originals/rag-chatbot-02.jpg",
-        "caption": "Document loading and chat retrieval"
-      }
-    ]
+    "preview": "/projects/workflows/previews/rag-chatbot-01.jpg",
+    "image": "/projects/workflows/originals/rag-chatbot-01.png",
+    "caption": "Project overview"
   },
   {
-    "slug": "customer-support-agent",
-    "title": "Customer support AI agent",
+    "slug": "rag-chatbot-02",
+    "title": "RAG pipeline & chatbot \u2014 Document loading and chat retrieval",
+    "platforms": [
+      "n8n"
+    ],
+    "summary": "Connect document ingestion and vector search to a conversational AI agent.",
+    "preview": "/projects/workflows/previews/rag-chatbot-02.jpg",
+    "image": "/projects/workflows/originals/rag-chatbot-02.jpg",
+    "caption": "Document loading and chat retrieval"
+  },
+  {
+    "slug": "customer-support-agent-01",
+    "title": "Customer support AI agent \u2014 Project overview",
     "platforms": [
       "n8n"
     ],
     "summary": "Route support emails to an AI agent connected to a Pinecone knowledge store.",
-    "preview": "/projects/workflows/previews/customer-support-agent.jpg",
-    "images": [
-      {
-        "src": "/projects/workflows/originals/customer-support-agent-01.png",
-        "caption": "Project overview"
-      },
-      {
-        "src": "/projects/workflows/originals/customer-support-agent-02.jpg",
-        "caption": "Support classification and reply workflow"
-      }
-    ]
+    "preview": "/projects/workflows/previews/customer-support-agent-01.jpg",
+    "image": "/projects/workflows/originals/customer-support-agent-01.png",
+    "caption": "Project overview"
   },
   {
-    "slug": "inventory-make",
-    "title": "Inventory AI system",
+    "slug": "customer-support-agent-02",
+    "title": "Customer support AI agent \u2014 Support classification and reply workflow",
+    "platforms": [
+      "n8n"
+    ],
+    "summary": "Route support emails to an AI agent connected to a Pinecone knowledge store.",
+    "preview": "/projects/workflows/previews/customer-support-agent-02.jpg",
+    "image": "/projects/workflows/originals/customer-support-agent-02.jpg",
+    "caption": "Support classification and reply workflow"
+  },
+  {
+    "slug": "inventory-make-01",
+    "title": "Inventory AI system \u2014 Project overview",
     "platforms": [
       "Make"
     ],
     "summary": "Extract email information with OpenAI, parse JSON and find and update spreadsheet rows.",
-    "preview": "/projects/workflows/previews/inventory-make.jpg",
-    "images": [
-      {
-        "src": "/projects/workflows/originals/inventory-make-01.png",
-        "caption": "Project overview"
-      },
-      {
-        "src": "/projects/workflows/originals/inventory-make-02.jpg",
-        "caption": "Gmail to OpenAI to Google Sheets"
-      }
-    ]
+    "preview": "/projects/workflows/previews/inventory-make-01.jpg",
+    "image": "/projects/workflows/originals/inventory-make-01.png",
+    "caption": "Project overview"
   },
   {
-    "slug": "appointment-highlevel",
-    "title": "Appointment follow-up",
+    "slug": "inventory-make-02",
+    "title": "Inventory AI system \u2014 Gmail to OpenAI to Google Sheets",
+    "platforms": [
+      "Make"
+    ],
+    "summary": "Extract email information with OpenAI, parse JSON and find and update spreadsheet rows.",
+    "preview": "/projects/workflows/previews/inventory-make-02.jpg",
+    "image": "/projects/workflows/originals/inventory-make-02.jpg",
+    "caption": "Gmail to OpenAI to Google Sheets"
+  },
+  {
+    "slug": "appointment-highlevel-01",
+    "title": "Appointment follow-up \u2014 Project overview",
     "platforms": [
       "HighLevel"
     ],
     "summary": "Connect customer bookings to tags, workflow removal, confirmation, reminders and post-call follow-up.",
-    "preview": "/projects/workflows/previews/appointment-highlevel.jpg",
-    "images": [
-      {
-        "src": "/projects/workflows/originals/appointment-highlevel-01.png",
-        "caption": "Project overview"
-      },
-      {
-        "src": "/projects/workflows/originals/appointment-highlevel-02.jpg",
-        "caption": "Booking confirmation and timed follow-up"
-      }
-    ]
+    "preview": "/projects/workflows/previews/appointment-highlevel-01.jpg",
+    "image": "/projects/workflows/originals/appointment-highlevel-01.png",
+    "caption": "Project overview"
   },
   {
-    "slug": "course-highlevel",
-    "title": "Five-day course",
+    "slug": "appointment-highlevel-02",
+    "title": "Appointment follow-up \u2014 Booking confirmation and timed follow-up",
+    "platforms": [
+      "HighLevel"
+    ],
+    "summary": "Connect customer bookings to tags, workflow removal, confirmation, reminders and post-call follow-up.",
+    "preview": "/projects/workflows/previews/appointment-highlevel-02.jpg",
+    "image": "/projects/workflows/originals/appointment-highlevel-02.jpg",
+    "caption": "Booking confirmation and timed follow-up"
+  },
+  {
+    "slug": "course-highlevel-01",
+    "title": "Five-day course \u2014 Project overview",
     "platforms": [
       "HighLevel"
     ],
     "summary": "Organize course enrollment with opportunity branches, tagging, access emails and timed lessons.",
-    "preview": "/projects/workflows/previews/course-highlevel.jpg",
-    "images": [
-      {
-        "src": "/projects/workflows/originals/course-highlevel-01.png",
-        "caption": "Project overview"
-      },
-      {
-        "src": "/projects/workflows/originals/course-highlevel-02.jpg",
-        "caption": "Enrollment and course email sequence"
-      }
-    ]
+    "preview": "/projects/workflows/previews/course-highlevel-01.jpg",
+    "image": "/projects/workflows/originals/course-highlevel-01.png",
+    "caption": "Project overview"
   },
   {
-    "slug": "lead-highlevel",
-    "title": "Lead nurture",
+    "slug": "course-highlevel-02",
+    "title": "Five-day course \u2014 Enrollment and course email sequence",
+    "platforms": [
+      "HighLevel"
+    ],
+    "summary": "Organize course enrollment with opportunity branches, tagging, access emails and timed lessons.",
+    "preview": "/projects/workflows/previews/course-highlevel-02.jpg",
+    "image": "/projects/workflows/originals/course-highlevel-02.jpg",
+    "caption": "Enrollment and course email sequence"
+  },
+  {
+    "slug": "lead-highlevel-01",
+    "title": "Lead nurture \u2014 Project overview",
     "platforms": [
       "HighLevel"
     ],
     "summary": "Follow form submissions with opt-in confirmation and a timed nurture email sequence.",
-    "preview": "/projects/workflows/previews/lead-highlevel.jpg",
-    "images": [
-      {
-        "src": "/projects/workflows/originals/lead-highlevel-01.png",
-        "caption": "Project overview"
-      },
-      {
-        "src": "/projects/workflows/originals/lead-highlevel-02.jpg",
-        "caption": "Form intake and nurture sequence"
-      }
-    ]
+    "preview": "/projects/workflows/previews/lead-highlevel-01.jpg",
+    "image": "/projects/workflows/originals/lead-highlevel-01.png",
+    "caption": "Project overview"
   },
   {
-    "slug": "masterclass-highlevel",
-    "title": "Masterclass registration",
+    "slug": "lead-highlevel-02",
+    "title": "Lead nurture \u2014 Form intake and nurture sequence",
+    "platforms": [
+      "HighLevel"
+    ],
+    "summary": "Follow form submissions with opt-in confirmation and a timed nurture email sequence.",
+    "preview": "/projects/workflows/previews/lead-highlevel-02.jpg",
+    "image": "/projects/workflows/originals/lead-highlevel-02.jpg",
+    "caption": "Form intake and nurture sequence"
+  },
+  {
+    "slug": "masterclass-highlevel-01",
+    "title": "Masterclass registration \u2014 Project overview",
     "platforms": [
       "HighLevel"
     ],
     "summary": "Connect registration to opportunity handling, participant tags, internal notifications and welcome emails.",
-    "preview": "/projects/workflows/previews/masterclass-highlevel.jpg",
-    "images": [
-      {
-        "src": "/projects/workflows/originals/masterclass-highlevel-01.png",
-        "caption": "Project overview"
-      },
-      {
-        "src": "/projects/workflows/originals/masterclass-highlevel-02.jpg",
-        "caption": "Registration branches and welcome"
-      }
-    ]
+    "preview": "/projects/workflows/previews/masterclass-highlevel-01.jpg",
+    "image": "/projects/workflows/originals/masterclass-highlevel-01.png",
+    "caption": "Project overview"
   },
   {
-    "slug": "survey-highlevel",
-    "title": "Discovery survey",
+    "slug": "masterclass-highlevel-02",
+    "title": "Masterclass registration \u2014 Registration branches and welcome",
+    "platforms": [
+      "HighLevel"
+    ],
+    "summary": "Connect registration to opportunity handling, participant tags, internal notifications and welcome emails.",
+    "preview": "/projects/workflows/previews/masterclass-highlevel-02.jpg",
+    "image": "/projects/workflows/originals/masterclass-highlevel-02.jpg",
+    "caption": "Registration branches and welcome"
+  },
+  {
+    "slug": "survey-highlevel-01",
+    "title": "Discovery survey \u2014 Project overview",
     "platforms": [
       "HighLevel"
     ],
     "summary": "Route survey responses by business need, with opportunities, tags and booking-interest branches.",
-    "preview": "/projects/workflows/previews/survey-highlevel.jpg",
-    "images": [
-      {
-        "src": "/projects/workflows/originals/survey-highlevel-01.png",
-        "caption": "Project overview"
-      },
-      {
-        "src": "/projects/workflows/originals/survey-highlevel-02.jpg",
-        "caption": "Survey routing overview"
-      },
-      {
-        "src": "/projects/workflows/originals/survey-highlevel-03.jpg",
-        "caption": "Full discovery survey canvas"
-      }
-    ]
+    "preview": "/projects/workflows/previews/survey-highlevel-01.jpg",
+    "image": "/projects/workflows/originals/survey-highlevel-01.png",
+    "caption": "Project overview"
   },
   {
-    "slug": "general-event-highlevel",
-    "title": "General admission event",
+    "slug": "survey-highlevel-02",
+    "title": "Discovery survey \u2014 Survey routing overview",
+    "platforms": [
+      "HighLevel"
+    ],
+    "summary": "Route survey responses by business need, with opportunities, tags and booking-interest branches.",
+    "preview": "/projects/workflows/previews/survey-highlevel-02.jpg",
+    "image": "/projects/workflows/originals/survey-highlevel-02.jpg",
+    "caption": "Survey routing overview"
+  },
+  {
+    "slug": "survey-highlevel-03",
+    "title": "Discovery survey \u2014 Full discovery survey canvas",
+    "platforms": [
+      "HighLevel"
+    ],
+    "summary": "Route survey responses by business need, with opportunities, tags and booking-interest branches.",
+    "preview": "/projects/workflows/previews/survey-highlevel-03.jpg",
+    "image": "/projects/workflows/originals/survey-highlevel-03.jpg",
+    "caption": "Full discovery survey canvas"
+  },
+  {
+    "slug": "general-event-highlevel-01",
+    "title": "General admission event \u2014 Project overview",
     "platforms": [
       "HighLevel"
     ],
     "summary": "Map payment receipt to participant tagging, welcome emails, CRM records and an event reminder.",
-    "preview": "/projects/workflows/previews/general-event-highlevel.jpg",
-    "images": [
-      {
-        "src": "/projects/workflows/originals/general-event-highlevel-01.png",
-        "caption": "Project overview"
-      },
-      {
-        "src": "/projects/workflows/originals/general-event-highlevel-02.jpg",
-        "caption": "Payment to event kickoff"
-      }
-    ]
+    "preview": "/projects/workflows/previews/general-event-highlevel-01.jpg",
+    "image": "/projects/workflows/originals/general-event-highlevel-01.png",
+    "caption": "Project overview"
   },
   {
-    "slug": "vip-event-highlevel",
-    "title": "VIP event registration",
+    "slug": "general-event-highlevel-02",
+    "title": "General admission event \u2014 Payment to event kickoff",
+    "platforms": [
+      "HighLevel"
+    ],
+    "summary": "Map payment receipt to participant tagging, welcome emails, CRM records and an event reminder.",
+    "preview": "/projects/workflows/previews/general-event-highlevel-02.jpg",
+    "image": "/projects/workflows/originals/general-event-highlevel-02.jpg",
+    "caption": "Payment to event kickoff"
+  },
+  {
+    "slug": "vip-event-highlevel-01",
+    "title": "VIP event registration \u2014 Project overview",
     "platforms": [
       "HighLevel"
     ],
     "summary": "Connect paid VIP registration to notifications, CRM branches, welcome and kickoff emails.",
-    "preview": "/projects/workflows/previews/vip-event-highlevel.jpg",
-    "images": [
-      {
-        "src": "/projects/workflows/originals/vip-event-highlevel-01.png",
-        "caption": "Project overview"
-      },
-      {
-        "src": "/projects/workflows/originals/vip-event-highlevel-02.jpg",
-        "caption": "VIP registration and reminder workflow"
-      }
-    ]
+    "preview": "/projects/workflows/previews/vip-event-highlevel-01.jpg",
+    "image": "/projects/workflows/originals/vip-event-highlevel-01.png",
+    "caption": "Project overview"
   },
   {
-    "slug": "ecommerce-journey",
-    "title": "Ecommerce customer journey",
+    "slug": "vip-event-highlevel-02",
+    "title": "VIP event registration \u2014 VIP registration and reminder workflow",
+    "platforms": [
+      "HighLevel"
+    ],
+    "summary": "Connect paid VIP registration to notifications, CRM branches, welcome and kickoff emails.",
+    "preview": "/projects/workflows/previews/vip-event-highlevel-02.jpg",
+    "image": "/projects/workflows/originals/vip-event-highlevel-02.jpg",
+    "caption": "VIP registration and reminder workflow"
+  },
+  {
+    "slug": "ecommerce-journey-01",
+    "title": "Ecommerce customer journey \u2014 Customer journey overview",
     "platforms": [
       "Zapier",
       "HighLevel"
     ],
     "summary": "Connect Shopify order events to CRM records, fulfillment follow-up, post-purchase emails and review requests.",
-    "preview": "/projects/workflows/previews/ecommerce-journey.jpg",
-    "images": [
-      {
-        "src": "/projects/workflows/originals/ecommerce-journey-01.png",
-        "caption": "Customer journey overview"
-      },
-      {
-        "src": "/projects/workflows/originals/ecommerce-journey-02.png",
-        "caption": "Fulfilled order integration"
-      },
-      {
-        "src": "/projects/workflows/originals/ecommerce-journey-03.png",
-        "caption": "Paid order integration"
-      },
-      {
-        "src": "/projects/workflows/originals/ecommerce-journey-04.png",
-        "caption": "Post-purchase campaign overview"
-      },
-      {
-        "src": "/projects/workflows/originals/ecommerce-journey-05.png",
-        "caption": "Abandoned checkout overview"
-      },
-      {
-        "src": "/projects/workflows/originals/ecommerce-journey-06.jpg",
-        "caption": "Zapier: fulfilled order to CRM"
-      },
-      {
-        "src": "/projects/workflows/originals/ecommerce-journey-07.jpg",
-        "caption": "HighLevel: fulfillment thank-you sequence"
-      },
-      {
-        "src": "/projects/workflows/originals/ecommerce-journey-08.jpg",
-        "caption": "Zapier: paid order to contact"
-      },
-      {
-        "src": "/projects/workflows/originals/ecommerce-journey-09.jpg",
-        "caption": "HighLevel: paid order opportunity"
-      },
-      {
-        "src": "/projects/workflows/originals/ecommerce-journey-10.jpg",
-        "caption": "Zapier: abandoned checkout intake"
-      },
-      {
-        "src": "/projects/workflows/originals/ecommerce-journey-11.jpg",
-        "caption": "HighLevel: post-purchase campaign"
-      },
-      {
-        "src": "/projects/workflows/originals/ecommerce-journey-12.jpg",
-        "caption": "HighLevel: review request"
-      },
-      {
-        "src": "/projects/workflows/originals/ecommerce-journey-13.jpg",
-        "caption": "HighLevel: customer journey workflow list"
-      }
-    ]
+    "preview": "/projects/workflows/previews/ecommerce-journey-01.jpg",
+    "image": "/projects/workflows/originals/ecommerce-journey-01.png",
+    "caption": "Customer journey overview"
   },
   {
-    "slug": "weekly-sheets",
-    "title": "Weekly Google Sheets lookup",
+    "slug": "ecommerce-journey-02",
+    "title": "Ecommerce customer journey \u2014 Fulfilled order integration",
+    "platforms": [
+      "Zapier",
+      "HighLevel"
+    ],
+    "summary": "Connect Shopify order events to CRM records, fulfillment follow-up, post-purchase emails and review requests.",
+    "preview": "/projects/workflows/previews/ecommerce-journey-02.jpg",
+    "image": "/projects/workflows/originals/ecommerce-journey-02.png",
+    "caption": "Fulfilled order integration"
+  },
+  {
+    "slug": "ecommerce-journey-03",
+    "title": "Ecommerce customer journey \u2014 Paid order integration",
+    "platforms": [
+      "Zapier",
+      "HighLevel"
+    ],
+    "summary": "Connect Shopify order events to CRM records, fulfillment follow-up, post-purchase emails and review requests.",
+    "preview": "/projects/workflows/previews/ecommerce-journey-03.jpg",
+    "image": "/projects/workflows/originals/ecommerce-journey-03.png",
+    "caption": "Paid order integration"
+  },
+  {
+    "slug": "ecommerce-journey-04",
+    "title": "Ecommerce customer journey \u2014 Post-purchase campaign overview",
+    "platforms": [
+      "Zapier",
+      "HighLevel"
+    ],
+    "summary": "Connect Shopify order events to CRM records, fulfillment follow-up, post-purchase emails and review requests.",
+    "preview": "/projects/workflows/previews/ecommerce-journey-04.jpg",
+    "image": "/projects/workflows/originals/ecommerce-journey-04.png",
+    "caption": "Post-purchase campaign overview"
+  },
+  {
+    "slug": "ecommerce-journey-05",
+    "title": "Ecommerce customer journey \u2014 Abandoned checkout overview",
+    "platforms": [
+      "Zapier",
+      "HighLevel"
+    ],
+    "summary": "Connect Shopify order events to CRM records, fulfillment follow-up, post-purchase emails and review requests.",
+    "preview": "/projects/workflows/previews/ecommerce-journey-05.jpg",
+    "image": "/projects/workflows/originals/ecommerce-journey-05.png",
+    "caption": "Abandoned checkout overview"
+  },
+  {
+    "slug": "ecommerce-journey-06",
+    "title": "Ecommerce customer journey \u2014 Zapier: fulfilled order to CRM",
+    "platforms": [
+      "Zapier",
+      "HighLevel"
+    ],
+    "summary": "Connect Shopify order events to CRM records, fulfillment follow-up, post-purchase emails and review requests.",
+    "preview": "/projects/workflows/previews/ecommerce-journey-06.jpg",
+    "image": "/projects/workflows/originals/ecommerce-journey-06.jpg",
+    "caption": "Zapier: fulfilled order to CRM"
+  },
+  {
+    "slug": "ecommerce-journey-07",
+    "title": "Ecommerce customer journey \u2014 HighLevel: fulfillment thank-you sequence",
+    "platforms": [
+      "Zapier",
+      "HighLevel"
+    ],
+    "summary": "Connect Shopify order events to CRM records, fulfillment follow-up, post-purchase emails and review requests.",
+    "preview": "/projects/workflows/previews/ecommerce-journey-07.jpg",
+    "image": "/projects/workflows/originals/ecommerce-journey-07.jpg",
+    "caption": "HighLevel: fulfillment thank-you sequence"
+  },
+  {
+    "slug": "ecommerce-journey-08",
+    "title": "Ecommerce customer journey \u2014 Zapier: paid order to contact",
+    "platforms": [
+      "Zapier",
+      "HighLevel"
+    ],
+    "summary": "Connect Shopify order events to CRM records, fulfillment follow-up, post-purchase emails and review requests.",
+    "preview": "/projects/workflows/previews/ecommerce-journey-08.jpg",
+    "image": "/projects/workflows/originals/ecommerce-journey-08.jpg",
+    "caption": "Zapier: paid order to contact"
+  },
+  {
+    "slug": "ecommerce-journey-09",
+    "title": "Ecommerce customer journey \u2014 HighLevel: paid order opportunity",
+    "platforms": [
+      "Zapier",
+      "HighLevel"
+    ],
+    "summary": "Connect Shopify order events to CRM records, fulfillment follow-up, post-purchase emails and review requests.",
+    "preview": "/projects/workflows/previews/ecommerce-journey-09.jpg",
+    "image": "/projects/workflows/originals/ecommerce-journey-09.jpg",
+    "caption": "HighLevel: paid order opportunity"
+  },
+  {
+    "slug": "ecommerce-journey-10",
+    "title": "Ecommerce customer journey \u2014 Zapier: abandoned checkout intake",
+    "platforms": [
+      "Zapier",
+      "HighLevel"
+    ],
+    "summary": "Connect Shopify order events to CRM records, fulfillment follow-up, post-purchase emails and review requests.",
+    "preview": "/projects/workflows/previews/ecommerce-journey-10.jpg",
+    "image": "/projects/workflows/originals/ecommerce-journey-10.jpg",
+    "caption": "Zapier: abandoned checkout intake"
+  },
+  {
+    "slug": "ecommerce-journey-11",
+    "title": "Ecommerce customer journey \u2014 HighLevel: post-purchase campaign",
+    "platforms": [
+      "Zapier",
+      "HighLevel"
+    ],
+    "summary": "Connect Shopify order events to CRM records, fulfillment follow-up, post-purchase emails and review requests.",
+    "preview": "/projects/workflows/previews/ecommerce-journey-11.jpg",
+    "image": "/projects/workflows/originals/ecommerce-journey-11.jpg",
+    "caption": "HighLevel: post-purchase campaign"
+  },
+  {
+    "slug": "ecommerce-journey-12",
+    "title": "Ecommerce customer journey \u2014 HighLevel: review request",
+    "platforms": [
+      "Zapier",
+      "HighLevel"
+    ],
+    "summary": "Connect Shopify order events to CRM records, fulfillment follow-up, post-purchase emails and review requests.",
+    "preview": "/projects/workflows/previews/ecommerce-journey-12.jpg",
+    "image": "/projects/workflows/originals/ecommerce-journey-12.jpg",
+    "caption": "HighLevel: review request"
+  },
+  {
+    "slug": "ecommerce-journey-13",
+    "title": "Ecommerce customer journey \u2014 HighLevel: customer journey workflow list",
+    "platforms": [
+      "Zapier",
+      "HighLevel"
+    ],
+    "summary": "Connect Shopify order events to CRM records, fulfillment follow-up, post-purchase emails and review requests.",
+    "preview": "/projects/workflows/previews/ecommerce-journey-13.jpg",
+    "image": "/projects/workflows/originals/ecommerce-journey-13.jpg",
+    "caption": "HighLevel: customer journey workflow list"
+  },
+  {
+    "slug": "weekly-sheets-01",
+    "title": "Weekly Google Sheets lookup \u2014 Project overview",
     "platforms": [
       "Zapier"
     ],
     "summary": "Use a weekly schedule to look up spreadsheet rows in Google Sheets.",
-    "preview": "/projects/workflows/previews/weekly-sheets.jpg",
-    "images": [
-      {
-        "src": "/projects/workflows/originals/weekly-sheets-01.png",
-        "caption": "Project overview"
-      },
-      {
-        "src": "/projects/workflows/originals/weekly-sheets-02.jpg",
-        "caption": "Weekly schedule and row lookup"
-      }
-    ]
+    "preview": "/projects/workflows/previews/weekly-sheets-01.jpg",
+    "image": "/projects/workflows/originals/weekly-sheets-01.png",
+    "caption": "Project overview"
+  },
+  {
+    "slug": "weekly-sheets-02",
+    "title": "Weekly Google Sheets lookup \u2014 Weekly schedule and row lookup",
+    "platforms": [
+      "Zapier"
+    ],
+    "summary": "Use a weekly schedule to look up spreadsheet rows in Google Sheets.",
+    "preview": "/projects/workflows/previews/weekly-sheets-02.jpg",
+    "image": "/projects/workflows/originals/weekly-sheets-02.jpg",
+    "caption": "Weekly schedule and row lookup"
   }
 ]

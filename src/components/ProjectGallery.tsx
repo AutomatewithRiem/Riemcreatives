@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState, type CSSProperties } from 'react'
 import { useNavigate } from 'react-router-dom'
 import NeuralBackground from './NeuralBackground'
-import { carouselLayers } from '@/data/carousel-projects'
+import { carouselLayers, carouselProjects } from '@/data/carousel-projects'
 
 export function openProjectGallery(element: HTMLElement) {
   const box = element.getBoundingClientRect()
@@ -33,7 +33,7 @@ export default function ProjectGallery() {
   return open ? <dialog ref={dialog} className="project-gallery" aria-labelledby="project-gallery-title" onClose={() => setOpen(false)} style={{ transformOrigin: `${origin.x}% ${origin.y}%` }}>
     <NeuralBackground />
     <div className="project-gallery__content">
-      <header className="project-gallery__header"><div><span className="resume-kicker">All 21 projects · CRM, AI agents & funnel design</span><h1 id="project-gallery-title">Explore my projects.</h1></div><button type="button" className="project-gallery__close" onClick={close} aria-label="Close project gallery" autoFocus>Close <span aria-hidden="true">×</span></button></header>
+      <header className="project-gallery__header"><div><span className="resume-kicker">{carouselProjects.length} individual items · CRM, AI agents & funnel design</span><h1 id="project-gallery-title">Explore my projects.</h1></div><button type="button" className="project-gallery__close" onClick={close} aria-label="Close project gallery" autoFocus>Close <span aria-hidden="true">×</span></button></header>
       <section className="project-orbit" aria-label="Rotating project carousel">
         <div className="project-orbit__controls"><p>Hover to pause · Click a page to explore</p><button type="button" aria-pressed={paused} onClick={() => setPaused(value => !value)}>{paused ? 'Resume rotation' : 'Pause rotation'}</button></div>
         {carouselLayers.map((projects, layer) => <div className="project-orbit__layer" key={layer}><h2>Layer {layer + 1} <small>{projects.length} projects</small></h2><div className="project-orbit__stage" data-paused={paused}>

@@ -47,7 +47,7 @@ const n8nProjects = [
 export function Projects() {
   const { hash } = useLocation()
   useEffect(() => {
-    if (!/^#(?:project-0[1-8]|workflow-project-[a-z-]+)$/.test(hash)) return
+    if (!/^#(?:project-0[1-8]|workflow-project-[a-z0-9-]+)$/.test(hash)) return
     const frame = requestAnimationFrame(() => {
       const target = document.getElementById(hash.slice(1))
       target?.scrollIntoView({ block: 'start', behavior: 'instant' })
