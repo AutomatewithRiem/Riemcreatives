@@ -442,3 +442,22 @@ html[data-perf='low'] .home__cta-nerve rect { animation: none; }
 .project-gallery__header { position: sticky; top: 0; z-index: 3; background: #09060ff5; padding: 16px 0; }
 @media(max-width:1200px) { .all-projects__grid { grid-template-columns: repeat(2, minmax(0,1fr)); } }
 @media(max-width:600px) { .all-projects__grid { grid-template-columns: 1fr; gap: 24px; } .all-projects__card h3 { font-size: 20px; } }
+
+/* One spinning carousel above the full, scrollable individual-project grid. */
+.project-spinner { min-width: 0; margin-bottom: 40px; }
+.project-spinner header h2 { margin: 0 0 8px; font-size: 26px; }
+.project-spinner header p { color: var(--muted); font-size: 14px; }
+.project-spinner__stage { --spin-radius: 300px; --spin-width: 220px; position: relative; height: 510px; overflow: hidden; perspective: 1200px; }
+.project-spinner__card { position: absolute; left: 50%; top: 65px; width: var(--spin-width); height: 300px; margin-left: calc(var(--spin-width) / -2); display: flex; flex-direction: column; padding: 0 0 14px; border: 1px solid #ae78e3; border-radius: 12px; background: #160e22; color: #f7efff; overflow: hidden; text-align: left; cursor: pointer; font: inherit; transform: rotateY(var(--spin-angle)) translateZ(var(--spin-radius)); transition: transform 1.3s cubic-bezier(.22,.8,.2,1), opacity .5s; backface-visibility: hidden; }
+.project-spinner__card img { width: 100%; flex: 1; min-height: 0; object-fit: contain; background: #100a19; }
+.project-spinner__card span { font-size: 13px; line-height: 1.35; padding: 12px 12px 0; }
+.project-spinner__card small { font-size: 10px; color: #bda4d5; padding: 6px 12px 0; }
+.project-spinner__controls { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 12px; }
+.project-spinner__controls button { min-height: 44px; padding: 10px 16px; border: 1px solid #a56aef66; border-radius: 24px; color: #e6cfff; background: #241333; cursor: pointer; font: inherit; font-size: 13px; }
+.project-spinner__controls span { color: var(--muted); font-size: 13px; font-variant-numeric: tabular-nums; }
+.project-spinner__card:focus-visible, .project-spinner__controls button:focus-visible { outline: 3px solid #d39bff; outline-offset: 3px; }
+.project-spinner__current { text-align: center; color: var(--muted); font-size: 13px; }
+.project-gallery { overflow-y: auto; touch-action: pan-y; -webkit-overflow-scrolling: touch; }
+@media(max-width:600px) { .project-spinner__stage { --spin-radius: 175px; --spin-width: 156px; height: 405px; perspective: 850px; } .project-spinner__card { top: 55px; height: 250px; } .project-spinner__card span { font-size: 11px; } .project-spinner__controls { gap: 8px; } .project-spinner__controls button { padding: 9px 12px; font-size: 12px; } }
+@media(prefers-reduced-motion:reduce) { .project-spinner__card { transition: none; } }
+[data-a11y-motion='true'] .project-spinner__card { transition: none; }

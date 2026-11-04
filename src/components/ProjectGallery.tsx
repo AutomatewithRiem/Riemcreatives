@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import NeuralBackground from './NeuralBackground'
+import ProjectSpinner from './ProjectSpinner'
 import { carouselProjects } from '@/data/carousel-projects'
 
 export function openProjectGallery(element: HTMLElement) {
@@ -29,10 +30,11 @@ export default function ProjectGallery() {
     setOpen(false)
     navigate(href)
   }
-  return open ? <dialog ref={dialog} className="project-gallery" aria-labelledby="project-gallery-title" onClose={() => setOpen(false)} style={{ transformOrigin: `${origin.x}% ${origin.y}%` }}>
+  return open ? <dialog ref={dialog} className="project-gallery" data-lenis-prevent aria-labelledby="project-gallery-title" onClose={() => setOpen(false)} style={{ transformOrigin: `${origin.x}% ${origin.y}%` }}>
     <NeuralBackground />
     <div className="project-gallery__content">
       <header className="project-gallery__header"><div><span className="resume-kicker">{carouselProjects.length} individual items · CRM, AI agents & funnel design</span><h1 id="project-gallery-title">Explore my projects.</h1></div><button type="button" className="project-gallery__close" onClick={close} aria-label="Close project gallery" autoFocus>Close <span aria-hidden="true">×</span></button></header>
+      <ProjectSpinner onChoose={choose} />
       <section className="all-projects" aria-label="All individual projects">
         <p>Select any project below. Every item is shown individually.</p>
         <ul className="all-projects__grid">{carouselProjects.map(item => <li key={item.href}><button className="all-projects__card" type="button" onClick={() => choose(item.href)} aria-label={`Open ${item.title}`}>
