@@ -37,7 +37,7 @@ export default function WorkflowProjects() {
     </div>
     <p className="workflow-library__count" role="status">{visible.length} projects · {visible.reduce((n, p) => n + p.images.length, 0)} images</p>
     <ul className="workflow-library__grid">
-      {visible.map(p => <li key={p.slug}>
+      {visible.map(p => <li key={p.slug} tabIndex={-1} id={`workflow-project-${p.slug}`}>
         <button className="workflow-project__open" type="button" onClick={() => open(p.slug)} aria-haspopup="dialog" aria-label={`View ${p.title}: ${p.images.length} images`}>
           <img src={p.preview} alt={`${p.title} project cover`} width="720" height="720" loading="lazy" decoding="async" />
           <span className="workflow-project__meta">{p.platforms.join(' + ')}<span>{p.images.length} images ↗</span></span>

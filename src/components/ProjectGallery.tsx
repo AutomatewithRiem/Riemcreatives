@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState, type CSSProperties } from 'react'
 import { useNavigate } from 'react-router-dom'
 import NeuralBackground from './NeuralBackground'
-import { projectPreviews } from '@/data/project-previews'
+import { carouselLayers } from '@/data/carousel-projects'
 
 export function openProjectGallery(element: HTMLElement) {
   const box = element.getBoundingClientRect()
@@ -25,21 +25,21 @@ export default function ProjectGallery() {
   }, [])
   useEffect(() => { if (open) dialog.current?.showModal() }, [open])
   const close = () => dialog.current?.close()
-  const choose = (index: number) => {
+  const choose = (href: string) => {
     close()
     setOpen(false)
-    navigate(`/projects#project-${String(index + 1).padStart(2, '0')}`)
+    navigate(href)
   }
   return open ? <dialog ref={dialog} className="project-gallery" aria-labelledby="project-gallery-title" onClose={() => setOpen(false)} style={{ transformOrigin: `${origin.x}% ${origin.y}%` }}>
     <NeuralBackground />
     <div className="project-gallery__content">
-      <header className="project-gallery__header"><div><span className="resume-kicker">Selected work · CRM, n8n & funnel design</span><h1 id="project-gallery-title">Explore my projects.</h1></div><button type="button" className="project-gallery__close" onClick={close} aria-label="Close project gallery" autoFocus>Close <span aria-hidden="true">×</span></button></header>
+      <header className="project-gallery__header"><div><span className="resume-kicker">All 21 projects · CRM, AI agents & funnel design</span><h1 id="project-gallery-title">Explore my projects.</h1></div><button type="button" className="project-gallery__close" onClick={close} aria-label="Close project gallery" autoFocus>Close <span aria-hidden="true">×</span></button></header>
       <section className="project-orbit" aria-label="Rotating project carousel">
         <div className="project-orbit__controls"><p>Hover to pause · Click a page to explore</p><button type="button" aria-pressed={paused} onClick={() => setPaused(value => !value)}>{paused ? 'Resume rotation' : 'Pause rotation'}</button></div>
-        <div className="project-orbit__stage" data-paused={paused}>
+        {carouselLayers.map((projects, layer) => <div className="project-orbit__layer" key={layer}><h2>Layer {layer + 1} <small>{projects.length} projects</small></h2><div className="project-orbit__stage" data-paused={paused}>
           <div className="project-orbit__halo" />
-          <div className="project-orbit__tilt"><div className="project-orbit__ring">{projectPreviews.map((item, i) => <button className="project-orbit__page" type="button" key={item.image} style={{ '--angle': `${i * (360 / projectPreviews.length)}deg` } as CSSProperties} onClick={() => choose(i)} aria-label={`Open ${item.title}`}><div className="project-orbit__image"><img src={item.image} alt="" /></div><span>{item.title}</span><small>{item.kind}</small></button>)}</div></div>
-        </div>
+          <div className="project-orbit__tilt"><div className="project-orbit__ring">{projects.map((item, i) => <button className="project-orbit__page" type="button" key={item.image} style={{ '--angle': `${i * (360 / projects.length)}deg` } as CSSProperties} onClick={() => choose(item.href)} aria-label={`Open ${item.title}`}><div className="project-orbit__image"><img src={item.image} alt="" /></div><span>{item.title}</span><small>{item.kind}</small></button>)}</div></div>
+        </div><div className="project-orbit__index">{projects.map(item => <button type="button" key={item.href} onClick={() => choose(item.href)}>{item.title} ↗</button>)}</div></div>)}
       </section>
     </div>
   </dialog> : null

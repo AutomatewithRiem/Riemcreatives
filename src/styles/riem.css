@@ -414,3 +414,14 @@ html[data-perf='low'] .home__cta-nerve rect { animation: none; }
 @media (max-width: 1250px) { .workflow-library__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 600px) { .workflow-library__grid { grid-template-columns: 1fr; gap: 32px; } .workflow-project__open h3 { font-size: 22px; } .workflow-library__grid li > p { font-size: 15px; } .workflow-viewer { width: calc(100vw - 16px); height: calc(100svh - 16px); padding: 14px; } .workflow-viewer__head h2 { font-size: 20px; } .workflow-viewer__head p { font-size: 12px; } .workflow-viewer__inner { gap: 12px; } .workflow-viewer__controls { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; } .workflow-viewer__controls a { margin: 0; justify-content: center; } .workflow-viewer__controls button { font-size: 12px; padding: 8px; } }
 @media (prefers-reduced-motion: reduce) { .workflow-project__open > img { transition: none; } }
+
+/* Full collection: separate carousel layers keep every project reachable. */
+.projects-showcase-layers { display: grid; gap: 28px; min-width: 0; }
+.projects-showcase__layer-title, .project-orbit__layer > h2 { margin: 8px 20px 0; font-size: 18px; }
+.projects-showcase__layer-title small, .project-orbit__layer > h2 small { margin-left: 12px; color: var(--muted); font-size: 12px; font-weight: 400; }
+.projects-showcase__page--complete .projects-showcase__image img, .project-orbit__image img { object-fit: contain; object-position: center; }
+.project-orbit__layer + .project-orbit__layer { margin-top: 48px; }
+.project-orbit__index { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+.project-orbit__index button { padding: 10px 14px; min-height: 44px; color: #e6cfff; background: #241333; border: 1px solid #a56aef55; border-radius: 8px; font-size: 12px; }
+.workflow-library__grid li { scroll-margin-top: 24px; }
+@media(max-width:600px) { .projects-showcase-layers { gap: 20px; } .project-orbit__controls { flex-wrap: wrap; } .project-orbit__index { justify-content: flex-start; } }
